@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site maneiro</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #737272;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .cabecalio{
+            background-color: #F15858;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 44px;
+            align-items: center;
+            height: 80px;
+        }
+
+        .caixa {
+                background-color: #d9d9d9;
+                width: 300px;
+                height: 300px;
+                align-items: center;
+            }
+
+        .principal {
+                display: flex;
+                justify-content: space-around;
+                height: 580px;
+                background-color: #737272;
+                align-items: center;
+            }
+
+        .titulo-secao {
+                text-align: center;
+                margin: 0;
+                padding-top: 5px;
+                color: #FFFFFF;
+            }
+
+        .primaria {
+                background-color: #B1C2F0;
+                height: 384px;
+                margin-bottom: 20px;
+            }
+
+        .secundaria {
+                background-color: #7498f8;
+                height: 384px;
+                margin-bottom: 20px;
+            }
+            
+        .textos{
+                display: flex;
+                text-align: center;
+                font-size: 12px;
+                color: #FFFFFF;
+                align-items: center;
+                height: 310px;
+                justify-content: space-around;
+            }
+            
+        .p-texto{
+                width: 300px;
+            }
+            
+        .circulo {
+                background-color: #d9d9d9;
+                width: 41px;
+                height: 41px;
+                border-radius: 50%;
+            }
+            
+        .rodape {
+                display: flex;
+                background-color: #F15858;
+                color: #FFFFFF;
+                /*justify-content: space-around;*/
+                align-items: center;
+            }
+            
+        .circulos  {
+                display: flex;
+            }
+            
+        .rodape-laterais {
+                flex: 1;
+            }
+            
+        .rodape-centro {
+                flex: 3;
+                text-align: center;
+            }
+
+    </style>
+</head>
+<body>
+    <header class="cabecalio">
+        <img class="logo" src="https://img.pikbest.com/origin/10/10/31/36DpIkbEsTehG.png!w700wp"/>
+        <ul class="menu"> 
+            <li>Inicio</li>
+            <li>Sobre</li>
+            <li>Contato</li>
+        </ul>
+    </header>
+    <section class="principal">
+            <img class="caixa" src="https://static.vecteezy.com/system/resources/thumbnails/024/553/534/small/lion-head-logo-mascot-wildlife-animal-illustration-generative-ai-png.png"/>
+            <img class="caixa" src="https://static.vecteezy.com/system/resources/thumbnails/024/553/534/small/lion-head-logo-mascot-wildlife-animal-illustration-generative-ai-png.png"/>
+            <img class="caixa" src="https://static.vecteezy.com/system/resources/thumbnails/024/553/534/small/lion-head-logo-mascot-wildlife-animal-illustration-generative-ai-png.png"/>
+        </section>
+        <section class="primaria">
+            <h2 class="titulo-secao">MISSÃO - lorem batata frita</h2>
+            <div class="textos">
+                <div>
+                    <h3>Missão</h3>
+                    <p class="p-texxto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Quisque auctor leo sit amet massa porttitor laoreet.
+                        Fusce eleifend nunc at velit sodales pretium. Nulla
+                        maximus lectus sit amet diam mattis, ultricies fringilla
+                        nibh aliquam. Sed tellus enim, viverra tincidunt
+                        vulputate eu, venenatis quis purus. Aliquam quis leo
+                        massa. Fusce orci augue, consectetur eget felis vitae,
+                        efficitur fringilla nisl. Morbi rhoncus, massa et
+                        efficitur imperdiet, orci neque condimentum purus, at
+                        sodales nulla arcu a sem. Nam augue nisl, ullamcorper
+                        quis enim quis, fermentum ullamcorper dui.
+                    </p>
+                </div>
+                <div>
+    </section>
+    <section class="secundaria">
+            <h2 class="titulo-secao">VISÃO - lorem batata frita</h2>
+            <div class="textos">
+                <div>
+                    <h3>Visão</h3>
+                    <p class="p-texxto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Quisque auctor leo sit amet massa porttitor laoreet.
+                        Fusce eleifend nunc at velit sodales pretium. Nulla
+                        maximus lectus sit amet diam mattis, ultricies fringilla
+                        nibh aliquam. Sed tellus enim, viverra tincidunt
+                        vulputate eu, venenatis quis purus. Aliquam quis leo
+                        massa. Fusce orci augue, consectetur eget felis vitae,
+                        efficitur fringilla nisl. Morbi rhoncus, massa et
+                        efficitur imperdiet, orci neque condimentum purus, at
+                        sodales nulla arcu a sem. Nam augue nisl, ullamcorper
+                        quis enim quis, fermentum ullamcorper dui.
+                    </p>
+                </div>
+                <div>
+    </section>
+    <footer class="rodape">
+            <img
+                class="rodape-laterais logo"
+                src="https://img.pikbest.com/origin/10/10/31/36DpIkbEsTehG.png!w700wp"
+            />
+            <p class="rodape-centro">© Todos os direitos reservados - Pimba sites</p>
+            <div class="circulos rodape-laterais">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+            </div>
+        </footer>
+</body>
+</html>
