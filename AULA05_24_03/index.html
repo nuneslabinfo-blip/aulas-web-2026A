@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <label for="nome">Nome</label>
+    <input id="nome" type="text" placeholder="Digite seu nome"/>
+    <button id="salvar" >Salvar</button>
+
+    <script>
+
+        const botao = document.getElementById("salvar");
+        const input = document.getElementById("nome");
+
+        console.log(input);
+        
+        function imprimeBatata(){
+            const valorInput = input.value;
+
+            //Console log para reproduzir apenas no console
+            console.log(valorInput);
+
+            //Window alert serve para dar a caixa de mensagem
+            window.alert(valorInput);
+            input.value = "";
+        }
+
+        botao.addEventListener('click', imprimeBatata);
+
+        //========================================================
+        // Função anonima
+        //const botao = document.getElementById("salvar");
+        //botao.addEventListener('click', function (){
+        //    console.log("Batata");
+        //})
+    </script>
+</body>
+</html>

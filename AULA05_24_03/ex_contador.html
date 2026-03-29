@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <h1>Contador: <span id="numero">0</span></h1>
+
+    <button id="botaoReduzir">Reduzir -</button>
+    <button id="botaoAumentar">Aumentar +</button>
+
+    <script>
+        //Selecionamos os elementos que vamos usar
+        const display = document.getElementById("numero");
+        const botaoAumentar = document.getElementById("botaoAumentar");
+        const botaoReduzir = document.getElementById("botaoReduzir");
+
+        //Criamos uma variável para guardar o valor atual
+        let contador = 0;
+
+        //Função para aumentar
+        function aumentar() {
+            contador = contador + 1; // Soma 1 ao valor atual
+            display.textContent = contador; // Atualiza o texto na tela
+        }
+
+        //Função para reduzir
+        function reduzir() {
+            contador = contador - 1; // Subtrai 1 do valor atual
+            display.textContent = contador; // Atualiza o texto na tela
+        }
+
+        //Adicionamos os "ouvintes" de clique
+        botaoAumentar.addEventListener('click', aumentar);
+        botaoReduzir.addEventListener('click', reduzir);
+    </script>
+</body>
+</html>

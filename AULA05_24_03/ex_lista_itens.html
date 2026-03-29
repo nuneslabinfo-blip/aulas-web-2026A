@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Itens</title>
+
+    <style>
+        /* Um pouco de estilo para ficar organizado */
+        body { font-family: sans-serif; margin: 20px; }
+        ul { margin-top: 20px; }
+        li { margin-bottom: 5px; padding: 5px; background: #f4f4f4; border-radius: 4px; width: fit-content; }
+    </style>
+</head>
+<body>
+
+    <h2>Lista de Itens</h2>
+
+    <input type="text" id="itemInput" placeholder="Digite algo para a lista...">
+    <button id="botaoAdicionar">Adicionar à Lista</button>
+
+    <ul id="listaDeItens"></ul>
+
+    <script>
+        // Selecionar os elementos
+        const input = document.getElementById("itemInput");
+        const botao = document.getElementById("botaoAdicionar");
+        const listaUl = document.getElementById("listaDeItens");
+
+        // Função para criar e adicionar o item
+        function adicionarItem() {
+            const texto = input.value;
+
+            // Verificamos se o campo não está vazio
+            if (texto.trim() !== "") {
+                
+                // Criamos um novo elemento <li> na memória do navegador
+                const novoItem = document.createElement("li");
+                
+                // Colocamos o texto do input dentro desse <li>
+                novoItem.textContent = texto;
+
+                // Adicionamos o <li> dentro da nossa <ul> (a lista)
+                listaUl.appendChild(novoItem);
+
+                // Limpamos o campo e voltamos o foco para ele
+                input.value = "";
+                input.focus();
+            } else {
+                alert("Por favor, digite algo antes de adicionar!");
+            }
+        }
+
+        // Ouvinte de clique
+        botao.addEventListener('click', adicionarItem);
+
+        // BÔNUS: Permitir adicionar apertando a tecla "Enter"
+        //input.addEventListener('keypress', function(e) {
+        //    if (e.key === 'Enter') {
+        //        adicionarItem();
+        //    }
+        //});
+    </script>
+
+</body>
+</html>

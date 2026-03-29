@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boatao com mensagem</title>
+</head>
+<body>
+    <button id="clicar">Clicar</button>
+    <p id="texto"></p>
+
+    <script>
+        const botao = document.getElementById("clicar");
+        const paragrafo = document.getElementById("texto");
+
+        function imprimeMensagem() {
+            // Definimos a frase que queremos exibir
+            const mensagem = "Olá, mundo!";
+            
+            // Alteramos o conteúdo do parágrafo para a mensagem
+            paragrafo.textContent = mensagem;
+
+        }
+          
+        botao.addEventListener('click', imprimeMensagem);
+
+    </script>
+</body>
+</html>
