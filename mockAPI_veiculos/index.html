@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Carros</title>
+</head>
+<body>
+  <h1>Cadastrar Carros</h1>
+
+  <label>Modelo: <input type="text" id="modelo"></label><br><br>
+  <label>Potencia: <input type="number" step="any" id="potencia"></label><br><br>
+  <label>Cor: <input type="text" id="cor"></label><br><br>
+  <label>Combustivel: <input type="text" id="combustivel"></label><br><br>
+  <button id="btn">Cadastrar</button>
+
+  <pre id="resposta"></pre>
+
+  <script>
+    const butao = document.getElementById('btn');
+    butao.addEventListener('click', async function () {
+      const modelo = document.getElementById('modelo').value;
+      const potencia = Number(document.getElementById('potencia').value);
+      const cor = document.getElementById('cor').value;
+      const combustivel = document.getElementById('combustivel').value;
+      
+      const response = await fetch('https://6a28a92b4e1e783349a5da95.mockapi.io/api/veiculos/carros', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ modelo, potencia, cor, combustivel }),
+      });
+
+      const data = await response.json();
+      document.getElementById('resposta').textContent = JSON.stringify(data);
+    });
+
+
+  </script>
+</body>
+</html>
